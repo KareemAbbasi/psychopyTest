@@ -24,3 +24,25 @@ You can use the following to get more details:
 ```bash
 python main.py -h
 ```
+
+## Classes
+### DataLogger
+The data logger records the data of the experiment in two ways:
+1. Writes to a csv file named ```OUTPUT_FILE.csv```, where ```OUTPUT_FILE``` can be changed by the user.
+The data in this file is made from two columns. The first one is the name of the event and the second is the time of the event (counted since the beginning of the experiment).
+2. Sends data to a parallel port. This is optional and works if you use the flag -pp ```python main.py -o OUTPUT_FILE -pp```. You can also change the parallel port address by using -a ```python main.py -o OUTPUT_FILE -pp -a 0x0378```
+
+### ExperimentSounds
+Responsible for the sounds played during the experiment. When using the default configurations, it will play a sound with the frequency 440Hz 15 times and the sound with the frequency 500Hz 5 times. Each sound will be played for 0.2 seconds.
+
+You can change the frequencies and the number of times each one should be played. For example:
+```bash
+python main.py -o OUTPUT_FILE -f 440 500 660 880 -s 6 3 7 4
+```
+This will play the frequency 440Hz six times, 500Hz three times, 660Hz seven times and 880Hz four times.
+
+### ExperimentImages
+Generates the list of images that will be used in the experiment. The default images are in  ```images/```. This path can be changed using 
+```bash
+python main.py -o OUTPUT_FILE -i NEW_IMAGES_PATH
+```
