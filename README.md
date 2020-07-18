@@ -12,7 +12,7 @@ pip install numpy
 pip install psychopy
 ```
 
-To run the program use the following command. Make sure that the file ```main.py``` is in the same directory as the folder ```images``` which contains the images of the experiment, or you can specify the path for the images as shown below. 
+To run the program use the following command. Make sure that the file ```main.py``` is in the same directory as the folder ```images``` which contains the images of the experiment, or you can specify the path for the images as shown later. 
 
 ```bash
 python main.py -o OUTPUT_FILE
